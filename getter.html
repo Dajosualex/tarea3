@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmls="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<h1>getter y setter</h1>
+<p id="getter"></p>
+<script>
+class Phone{
+    constructor(brand){
+        this.phonename=brand;
+    }
+    present(){
+        return 'I have a '+ this.phonename;
+    }
+}
+
+class Model extends Phone{
+    constructor(brand,mod){
+        super(brand);
+        this.model=mod;
+    }
+    show(){
+        return this.present()+', it is a '+ this.model;
+    }
+}
+
+
+
+myPhone=new Model("Samsung","S10");
+document.getElementById("getter").innerHTML =myPhone.show();
+
+</script>
+
+</body>
+</html>
